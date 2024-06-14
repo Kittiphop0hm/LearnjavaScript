@@ -29,5 +29,18 @@ student['cars'] = cars
 console.log(student.email);
 console.log(student['address']);
 console.log(student);
+console.log(student.cars);
 
+//keep function in object
+const f1 = function getObj(obj) {
+    return obj
+}
+student.getFullName = function() {
+    return `${this.firstname} ${this.lastname}`
+}
+student['function'] = f1
+console.log(student);
+console.log(student.cars);
+console.log("Function: " , student.function(student));
+console.log(student.getFullName());
 
