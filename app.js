@@ -43,4 +43,5 @@ console.log(student);
 console.log(student.cars);
 console.log("Function: " , student.function(student));
 console.log(student.getFullName());
+console.log(student);
 
