@@ -57,3 +57,7 @@ p1['department'] = 'Back-End'
 p2['department'] = 'Front-End'
 console.log(p1);
 console.log(p2);
+p1.getFullName = function() {
+    return `${this.id} ${this.name} ${this.department}`
+}
+console.log(p1.getFullName());
