@@ -43,5 +43,17 @@ console.log(student);
 console.log(student.cars);
 console.log("Function: " , student.function(student));
 console.log(student.getFullName());
-console.log(student);
+console.log(student.getFullName);
 
+//contructor function
+function Person(id, name) {
+    this.id = id
+    this.name = name
+}
+const p1 = new Person(1, 'Ohm')
+const p2 = new Person(2, 'Dom')
+console.log(p1);
+p1['department'] = 'Back-End'
+p2['department'] = 'Front-End'
+console.log(p1);
+console.log(p2);
