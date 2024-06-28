@@ -61,3 +61,5 @@ p1.getFullName = function() {
     return `${this.id} ${this.name} ${this.department}`
 }
 console.log(p1.getFullName());
+
+//create object with class
