@@ -95,3 +95,23 @@ console.log(student1);
 console.log(student1.getFullName());
 console.log(Object.prototype.isPrototypeOf(student1));
 console.log(Object.prototype.isPrototypeOf(student2));
+
+//create object by using Object.create()
+const undergratSt1 = Object.create(student1)
+console.log(undergratSt1);
+console.log(undergratSt1.id);
+console.log(undergratSt1.fname);
+console.log(undergratSt1.lname);
+undergratSt1.project = 'Web Application'
+console.log(undergratSt1);
+
+//define method
+const square = {
+    side: 20,
+    area () {
+        return `${this.side * this.side}`
+    }
+}
+
+console.log(square.area());
+
