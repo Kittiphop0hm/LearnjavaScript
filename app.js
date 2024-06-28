@@ -63,3 +63,35 @@ p1.getFullName = function() {
 console.log(p1.getFullName());
 
 //create object with class
+class Student {
+    static arrays = []
+    constructor(id, fname, lname ) {
+        this.id = id
+        this.fname = fname
+        this.lname = lname 
+    }
+
+    getFullName() {
+        return `${this.fname} ${this.lname}`
+    }
+
+    static create(id, fname, lname) {
+        const st = new Student(id, fname, lname)
+        Student.arrays.push(st)
+    }
+
+    static getAllArrays() {
+        Student.arrays.forEach(element => {console.log(element)});
+    }
+}
+
+Student.create(1, 'Kittiphop', 'Sriranonchai')
+Student.getAllArrays();
+
+
+const student1 = new Student(1, 'Leborn', 'James')
+const student2 = new Student(2, 'Bronny', 'James')
+console.log(student1);
+console.log(student1.getFullName());
+console.log(Object.prototype.isPrototypeOf(student1));
+console.log(Object.prototype.isPrototypeOf(student2));
