@@ -116,7 +116,7 @@ const square = {
     }
 }
 
-const square2 = {side: 2}
+const square2 = square
 console.log('Compare: ' + square.compareSide(square2.side));
 
 console.log(square);
