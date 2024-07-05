@@ -107,11 +107,79 @@ console.log(undergratSt1);
 
 //define method
 const square = {
-    side: 20,
-    area () {
-        return `${this.side * this.side}`
+    side: 2,
+    area() {
+        return Math.PI * Math.pow(this.side, 2)
+    },
+    compareSide(compareSquare) {
+        return this.side === this.compareSquare
     }
 }
 
+const square2 = square
+console.log('Compare: ' + square.compareSide(square2.side));
+
+console.log(square);
+console.log(square.side);
 console.log(square.area());
+
+//compare object ==,=== (compare address not compare values)
+const person1 = {id:1, name:'Ohm'}
+const person2 = {id:2, name:'Ohm'}
+const olePerson = {id:1, name:'Ohm'}
+const newPerson = person1
+
+if (person1 == newPerson) {
+    console.log("true");
+}
+
+if (person1 === newPerson) {
+    console.log("true");
+}
+
+if (person1 == olePerson) {
+    console.log("true");    
+} else {
+    console.log("false");
+}
+
+if (person1 === olePerson) {
+    console.log("true");    
+} else {
+    console.log("false");
+}
+
+//create function compare object values
+
+let book1 = {
+    isbn: 123456789,
+    title: 'JavaScript',
+}
+
+let book2 = {
+    isbn: 123456789,
+    title: 'JavaScript',
+}
+
+function shallowEquality(obj1, obj2) {
+    const key1 = Object.keys(obj1)
+    const key2 = Object.keys(obj2)
+
+    if (key1.length !== key2.length) {
+        return false
+    }
+
+    for (let key of key1) {
+        if (obj1[key] !== obj2[key]) {
+            return false
+        }
+    }
+    return true
+}
+
+console.log(shallowEquality(book1, book2));
+
+
+
+
 
