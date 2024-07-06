@@ -7,14 +7,3 @@ const calGrade = function(score) {
     return 'X'
 }
 console.log(calGrade(60));
-
-
-function computeMagic(start, stop, stepOver) {
-    if (stop < 0) return -1
-    for (let i = 0; i < 10; i++ ) {
-        
-    }
-
-
-    
-}
