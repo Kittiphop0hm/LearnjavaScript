@@ -179,7 +179,37 @@ function shallowEquality(obj1, obj2) {
 
 console.log(shallowEquality(book1, book2));
 
+//pre exam
+function arrayStart(arr) {
+    let min = Math.min.apply(Math, arr)
+    let max = Math.max.apply(Math, arr)
+    let sum = 0
+    let avg = 0
+    arr.forEach(element => {sum += element});
+    avg = sum / arr.length
+    return {min: min, max: max, sum: sum, avg: avg}
+}
+
+console.log(arrayStart([1,2,3,4,5]));
 
 
+function findFileExtension(filename) {
+    return filename.substring(filename.lastIndexOf('.'))
+}
+
+console.log(findFileExtension('ohm.js'));
+
+function isImageFileExtension(filename) {
+    if (filename === null || filename === undefined) return false
+    return (
+        filename.endsWith('.png') ||
+        filename.endsWith('.jpg') ||
+        filename.endsWith('.jpeg') ||
+        filename.endsWith('.gif') ||
+        filename.endsWith('.svg')
+    )
+}
+
+console.log(isImageFileExtension('Gugu.jpg'));
 
 
