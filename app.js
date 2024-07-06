@@ -210,6 +210,7 @@ function isImageFileExtension(filename) {
     )
 }
 
-console.log(isImageFileExtension('Gugu.jpg'));
+console.log(isImageFileExtension('Gugu.html'));
+
 
 
