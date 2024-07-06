@@ -211,6 +211,3 @@ function isImageFileExtension(filename) {
 }
 
 console.log(isImageFileExtension('Gugu.html'));
-
-
-
