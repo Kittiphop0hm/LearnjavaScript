@@ -178,8 +178,3 @@ function shallowEquality(obj1, obj2) {
 }
 
 console.log(shallowEquality(book1, book2));
-
-
-
-
-
