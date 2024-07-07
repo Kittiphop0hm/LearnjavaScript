@@ -15,11 +15,15 @@ const student = {
     name: 'Ohmmy',
     content: {
         header: 'Basic JavaScript',
-        artist: 'Ohm.js'
+        artist: 'Ohm.js',
+        location: {
+            country: 'USA'
+        }
     }
 }
-
-let {content: {header}} = student
-let {content: {artist}} = student
-console.log(header);
+let {content: {header: header_coontent}} = student
+let {content: {artist}} = student //equally to const artist = student.artist 
+let {content: {location: {country: student_coutry}}} = student
+console.log(header_coontent);
 console.log(artist);
+console.log(student_coutry);
