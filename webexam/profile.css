@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.icon-arrow {
+    width: 100%;
+    background-color: plum;
+    padding: 10px;
+}
+
+.icon-arrow a i {
+    font-size: 25px;
+    color: black;
+}
+
+/* profile-section */
+.profile-section h1 {
+    padding: 30px 40px;
+}
+
+.profile-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.profile-content-info h2 {
+    padding-bottom: 30px;
+}
+
+.point-info {
+    display: flex;
+    justify-content: center;
+}
+
+.point-info p {
+    text-indent: 5px;
+}
+
+.activities-info {
+    display: flex;
+    justify-content: center;
+}
+
+.activities-info p {
+    text-indent: 5px;
+}
+
