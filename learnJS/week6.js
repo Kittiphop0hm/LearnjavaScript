@@ -94,6 +94,8 @@ console.log(result);
 const numbers = [2, 4, 6, 8]
 const map1 = numbers.map((number) => number * 2)
 console.log(map1);
+const map11 = numbers.map((number) => (number * 2) + 10)
+console.log(map11);
 
 const students = [
     {id: 1, name: 'Ohm'},
@@ -112,8 +114,12 @@ const persons = [
 //1
 const dePerson = persons.filter((person) => person.firstname.toLowerCase().includes('de') || person.lastname.toLowerCase().includes('de'))
 console.log(dePerson);
+const jaiPerson = persons.filter((person) => person.firstname.toLowerCase().includes('jai') || person.lastname.toLowerCase().includes('jai'))
+console.log(jaiPerson);
 //2
 const fullname = persons.map((person) => `${person.lastname}, ${person.firstname}`)
+const sumId = persons.map((person) => person.id + 1)
+console.log(sumId);
 console.log(fullname);
 //3
 const newId = persons.map((person) => {
