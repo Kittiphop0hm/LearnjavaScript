@@ -127,3 +127,19 @@ const newId = persons.map((person) => {
     return currentYear + '' + person.id
 })
 console.log(newId);
+//find
+const findLastname = persons.find((person) => person.lastname.toLocaleLowerCase().startsWith('dee'))
+console.log(findLastname);
+
+const findId = persons.find((person) => person.lastname.toLocaleLowerCase().startsWith('jai'))
+console.log(findId);
+//findIndex
+const findIndexLastname = persons.findIndex((person) => person.lastname.toLocaleLowerCase().startsWith('jai'))
+console.log(findIndexLastname);
+
+//every
+const checkId = persons.every((perosn) => person.id > 0)
+console.log(checkId);
+//some
+const checkSak = persons.some((person) => person.firstname.toLocaleLowerCase().endsWith('sak'))
+console.log(checkSak);
