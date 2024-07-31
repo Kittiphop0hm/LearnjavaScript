@@ -8,5 +8,10 @@ console.log(every)
 const some = arr2.some((arr) => arr === 0)
 console.log(some);
 
-const
+const names = ['alice', 'John', 'Bob', 'Ann']
+const isStartWithALetter = names.every((name) => name.toLocaleLowerCase().startsWith('a'))
+console.log(isStartWithALetter)
+
+const isSomeStartWithALetter = names.some((name) => name.toLocaleLowerCase().startsWith('a'))
+console.log(isSomeStartWithALetter);
 
