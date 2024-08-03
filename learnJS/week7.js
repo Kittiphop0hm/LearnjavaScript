@@ -14,4 +14,3 @@ console.log(isStartWithALetter)
 
 const isSomeStartWithALetter = names.some((name) => name.toLocaleLowerCase().startsWith('a'))
 console.log(isSomeStartWithALetter);
-
