@@ -7,3 +7,39 @@ const calGrade = function(score) {
     return 'X'
 }
 console.log(calGrade(60));
+const student = {
+    id: 555,
+    name: 'Ohmmy',
+    content: {
+        header: 'Basic JavaScript',
+        artist: 'Ohm.js',
+        location: {
+            country: 'USA',
+            myLocation(location) {
+                return `My location is ${location}`
+            }
+        }
+    },
+    helloMySelf(name) {
+        return `Hello ${name}`
+    }
+}
+let {content: {header: header_coontent}} = student
+let {content: {artist}} = student //equally to const artist = student.artist 
+let {content: {location: {country: student_coutry}}} = student
+let {name: myname} = student
+let {content: {location: {country: myLocation}}} = student
+let {content: {location: {myLocation: locationIs}}} = student //can't change name function in object
+console.log(header_coontent);
+console.log(artist);
+console.log(student_coutry);
+console.log(myname);
+console.log(myLocation);
+console.log(student.helloMySelf('Ohm'));
+console.log(student.content.location.myLocation('USA'));
+console.log(student.content.location.myLocation('Thailand'));
+
+
+
+
+
