@@ -41,5 +41,10 @@ console.log(student.content.location.myLocation('Thailand'));
 
 
 
+const checkNumber = (numbers, traget) => {
+    return numbers.some((number) => number === traget)
+}
+const numbers = [1,2,3,4,5,10]
+console.log(checkNumber(numbers, 10));
 
 
