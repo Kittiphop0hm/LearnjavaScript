@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World!</title>
+</head>
+<body>
+    <!-- Inline Script -->
+     <button onclick="alert('Inline')">Click me 1</button>
+     <button onclick="doSomeThing()">Click me 2</button>
+     <button onclick="showMassage()">Click me 3</button>
+
+     <!-- Internal -->
+      <script>
+        const doSomeThing = () => {
+            alert("Internal")
+        }
+      </script>
+
+
+      <script src="app.js"></script>
+</body>
+</html>

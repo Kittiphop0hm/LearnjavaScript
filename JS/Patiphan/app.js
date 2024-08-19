@@ -1,0 +1,3 @@
+const showMassage = () => {
+    alert("External")
+}
