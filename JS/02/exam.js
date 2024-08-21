@@ -5,6 +5,7 @@ const detailedType = (value) => {
     if (value === null) return 'null'
     return typeof(value);
 }
+console.log('-------------------CheckTypes------------------');
 console.log(detailedType('hello'));
 console.log(detailedType(123));
 console.log(detailedType(true));
