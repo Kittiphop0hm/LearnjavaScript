@@ -25,7 +25,17 @@ console.log(countVowels('world'));
 console.log(countVowels(''));
 
 //3
+function isPrime(num) {
+    if (num < 3 && num > 1) return true 
+    if (num % 2 === 0 || num % 3 === 0 || num % 4 === 0) return false
+    return true
+}
 
+console.log(isPrime(2));
+console.log(isPrime(4));
+console.log(isPrime(17));
+console.log(isPrime(99));
+console.log(isPrime(97));
 
 
 
