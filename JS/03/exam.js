@@ -30,17 +30,17 @@ function isPrime(num) {
     for (let i = 2; i <= num / 2; i++) {
         if (num % i === 0) {
             return false
-        }  
+        }
     }
     return true
 }
 
-console.log(isPrime(2));
-console.log(isPrime(4));
 console.log(isPrime(17));
 console.log(isPrime(99));
 console.log(isPrime(97));
 console.log(isPrime(33));
+console.log(isPrime(10));
+console.log(isPrime(83));
 
 
 
