@@ -26,8 +26,12 @@ console.log(countVowels(''));
 
 //3
 function isPrime(num) {
-    if (num < 3 && num > 1) return true 
-    if (num % 2 === 0 || num % 3 === 0 || num % 4 === 0) return false
+    if (num === 0 || num === 1) return false
+    for (let i = 2; i <= num / 2; i++) {
+        if (num % i === 0) {
+            return false
+        }  
+    }
     return true
 }
 
@@ -36,6 +40,7 @@ console.log(isPrime(4));
 console.log(isPrime(17));
 console.log(isPrime(99));
 console.log(isPrime(97));
+console.log(isPrime(33));
 
 
 
