@@ -59,3 +59,20 @@ const x = []
 x[0] = 1
 x[x.length] = 10
 console.log(x);
+
+delete x[0]
+console.log(x);
+
+x.push(100)
+x.push(200)
+console.log(x);
+console.log(x.length);
+x.pop()
+console.log(x);
+console.log(x.length);
+//shift
+x.unshift('A') //insert element to first index
+x.unshift('B')
+console.log(x);
+x.shift() //pop first element
+console.log(x);
