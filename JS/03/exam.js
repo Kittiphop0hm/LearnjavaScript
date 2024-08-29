@@ -23,6 +23,8 @@ function countVowels(str) {
 console.log(countVowels('hello'));
 console.log(countVowels('world'));
 console.log(countVowels(''));
+console.log(countVowels('A,E,I,O,U'));
+
 
 //3
 function isPrime(num) {
@@ -41,6 +43,3 @@ console.log(isPrime(97));
 console.log(isPrime(33));
 console.log(isPrime(10));
 console.log(isPrime(83));
-
-
-
