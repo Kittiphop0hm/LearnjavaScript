@@ -29,10 +29,3 @@ function getValue() {
     return this.name ?? 'Value is null'
 }
 console.log(getValue.call(person1));
-
-
-// console.log(person1.getName());
-
-
-
-
