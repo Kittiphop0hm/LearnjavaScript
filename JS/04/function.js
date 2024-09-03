@@ -17,3 +17,22 @@ const sum = (a, b) => {
 console.log(sum(5, 5));
 
 
+const person1 = {
+    id:1,
+    name:null,
+    getName: function() {
+        return this.name ?? 'Values is null'
+    }
+}
+const person2 = {id:1, name:null}
+function getValue() {
+    return this.name ?? 'Value is null'
+}
+console.log(getValue.call(person1));
+
+
+// console.log(person1.getName());
+
+
+
+
