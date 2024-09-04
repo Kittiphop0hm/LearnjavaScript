@@ -18,6 +18,11 @@ for (let [index, word] of words.entries()) {
     console.log(`${index} ${word}`);
 }
 
+const aa = [10,20,30]
+const [...bb] = aa 
+console.log(bb);
+
+
 
 
 
