@@ -15,3 +15,4 @@ const getStringLength = (arrs) => {
 console.log(getStringLength(['apple', 'banana', 'kiwi', 'orange']));
 console.log(getStringLength(['hello', 'world']));
 console.log(getStringLength(['ChatGPT', 'AI']));
+
