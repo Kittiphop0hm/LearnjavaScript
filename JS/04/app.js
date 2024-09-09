@@ -55,14 +55,15 @@ console.log(arrayFrom);
 console.log(arrayFrom.length);
 
 //push arrays
+console.log("Add element to array");
 const x = []
 x[0] = 1
 x[x.length] = 10
 console.log(x);
-
 delete x[0]
 console.log(x);
-
+// push
+console.log('Push');
 x.push(100)
 x.push(200)
 console.log(x);
@@ -71,6 +72,7 @@ x.pop()
 console.log(x);
 console.log(x.length);
 //shift
+console.log('Shift');
 x.unshift('A') //insert element to first index
 x.unshift('B')
 console.log(x);
