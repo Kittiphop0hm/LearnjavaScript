@@ -53,3 +53,20 @@ console.log(isValidPassword("Zky543#@"));
 console.log(isValidPassword("1#@!*aB^5"));
 console.log(isValidPassword("%5Ko&$pp"));
 console.log(isValidPassword("12345abcxyZ$"));
+
+
+const countVowel = (string) => {
+    const vowel = /[aeiou]/
+    let result = 0
+    for (let i = 0; i < string.length; i++) {
+        if (vowel.test(string.toLowerCase().charAt(i))) {
+            result++
+        }
+    }
+    return result
+}
+
+console.log(countVowel('aeiou'));
+console.log(countVowel('charAt'));
+
+
