@@ -68,5 +68,6 @@ const countVowel = (string) => {
 
 console.log(countVowel('aeiou'));
 console.log(countVowel('charAt'));
+console.log(countVowel('aeiououa'));
 
 
