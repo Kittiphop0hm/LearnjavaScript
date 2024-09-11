@@ -1,3 +1,4 @@
+//array version
 const countCovid = (persons) => {
   if (!Array.isArray(persons) || persons.length === 0)
     throw new Error("No Status");
@@ -10,6 +11,28 @@ const countCovid = (persons) => {
   }
   return result;
 };
+
+const countCovidV2 = (persons) => {
+  if (!Array.isArray(persons) || persons.length === 0) throw new Error('No status')
+  const statusPo = /[positive]/
+  const statusNe = /[negative]/
+  const result = []
+  for (let i = 0; i < persons.length; i++) {
+    if (!statusPo.test(persons[i].status.toLowerCase()) || !statusNe.test(persons[i].status.toLowerCase())) {
+        return 'No status'
+    } else if(statusPo.test(persons[i].status.toLowerCase().charAt(i))) {
+      result.push(persons[i].name)
+    }
+  }
+  return result
+}
+
+console.log('countCovidV2', countCovidV2([
+  { name: "Ohm1", status: "negative" },
+  { name: "Ohm2", status: "positive" },
+  { name: "Ohm3", status: "positive" },
+]));
+
 
 console.log(
   countCovid([
