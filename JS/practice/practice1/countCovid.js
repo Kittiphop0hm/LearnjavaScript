@@ -118,3 +118,9 @@ s2.name = 'Kai'
 console.log(s2);
 console.log(s1);
 
+
+const greet = (firstStr, lastStr) => {
+  return `${firstStr ?? 'Hello'} ${lastStr}`
+}
+
+console.log(greet(undefined, 'Ohm'));
