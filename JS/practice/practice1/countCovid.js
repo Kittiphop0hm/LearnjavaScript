@@ -91,4 +91,28 @@ console.log(countVowel('aeiou'));
 console.log(countVowel('charAt'));
 console.log(countVowel('aeiououa'));
 
+//test destructuring relation
+const arr = [1,2,3,4,5]
+const [a,b, ...c] = arr
+console.log(`a ${a}`);
+console.log(`b ${b}`);
+console.log(`c ${c}`);
+c.push(10)
+console.log(c);
+console.log(arr); // Not room relation
 
+//test
+const s1 = {
+  id: 1,
+  name: 'Ohm'
+}
+
+const s2 = Object.create(s1)
+console.log(s1);
+console.log(s2);
+s2.email = 'kittiphop@gmail.com'
+console.log(s1.email);
+console.log(s2);
+s2.name = 'Kai'
+console.log(s2);
+console.log(s1);

@@ -57,7 +57,7 @@ const s1 = Object.create(p1)
 console.log(s1);
 console.log(s1.id);
 console.log(s1.name);
-//Relation is share room
+//Relation is not share room
 p1.name = 'Izuzu'
 p1.id = 55555555
 console.log(`${s1.name} ${s1.id}`);
