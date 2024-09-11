@@ -124,3 +124,13 @@ const greet = (firstStr, lastStr) => {
 }
 
 console.log(greet(undefined, 'Ohm'));
+
+const reverseString = (str) => {
+    for (let i = 0; i < str.length; i++) {
+      
+      
+    }
+}
+
+
+
