@@ -18,10 +18,8 @@ const countCovidV2 = (persons) => {
   const statusNe = /[negative]/
   const result = []
   for (let i = 0; i < persons.length; i++) {
-    if (!statusPo.test(persons[i].status.toLowerCase()) || !statusNe.test(persons[i].status.toLowerCase())) {
-        return 'No status'
-    } else if(statusPo.test(persons[i].status.toLowerCase().charAt(i))) {
-      result.push(persons[i].name)
+    if (statusPo.test(persons[i].status.toLowerCase().charAt(i))) {
+        result.push(persons[i].name)
     }
   }
   return result
