@@ -107,6 +107,7 @@ const s1 = {
   name: 'Ohm'
 }
 
+//test Object.create()
 const s2 = Object.create(s1)
 console.log(s1);
 console.log(s2);
@@ -116,3 +117,4 @@ console.log(s2);
 s2.name = 'Kai'
 console.log(s2);
 console.log(s1);
+
