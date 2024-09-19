@@ -131,3 +131,17 @@ Object.prototype.toString = function () {
 }
 const a = {}
 console.log(a.toString());
+
+class Product {
+    constructor(id, price, stock) {
+        this.id = id
+        this.price = price
+        this.stock = stock
+    }
+}
+const p1 = new Product(1001, 100, 1)
+
+console.log(Product.prototype.isPrototypeOf(p1));
+console.log(Object.prototype.isPrototypeOf(p1));
+
+
