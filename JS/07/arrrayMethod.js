@@ -32,13 +32,13 @@ const students = [
   },
   {
     id: 4,
-    absent: f,
+    absent: false,
   },
   {
     id: 5,
     absent: false,
   },
 ];
-function findAbsentId() {}
+function findAbsentId() {} //array of absent id
 
-function isAllAbsent() {}
+function isAllAbsent() {} //boolean
