@@ -34,23 +34,18 @@ if (Object.keys(empObj).length === 0) {
 
 //Practice
 const extractAndRename = (obj) => {
-    return `{fullName:'${obj.name}',yearsOld:${obj.age}}`
+    const {name:fullName, age:yearsOld} = obj
+    return {fullName, yearsOld}
 }
+
 console.log(extractAndRename({name:'John',age:25,city:'New York'}));
 console.log(extractAndRename({name:'Jane',age:30}));
 
+
 const mergeAndDestructure = (obj1, obj2) => {
-    let resultName = ''
-    let resultAge = 0
-    if (obj1.hasOwnProperty('name') && obj1.hasOwnProperty('age')) {
-        return `{name:${obj1.name},age:${obj1.age}}`
-    }
-    if (obj2.hasOwnProperty('name') && obj2.hasOwnProperty('age')) {
-        return `{name:${obj2.name},age:${obj2.age}}`
-    }
-    if (condition) {
-        
-    }
+    const {name, age} = {...obj1, ...obj2}
+    return {name, age}
 }
 
-const obj = {name:'Jane',age:30}
+console.log(mergeAndDestructure({ name: 'John', age: 25 }, { city: 'New York' }))
+console.log(mergeAndDestructure({ name: 'Jane' }, { age: 30, country: 'USA' }))
