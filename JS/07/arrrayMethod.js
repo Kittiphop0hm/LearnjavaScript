@@ -39,6 +39,20 @@ const students = [
     absent: false,
   },
 ];
-function findAbsentId() {} //array of absent id
+function findAbsentId(items) {
+  return items.filter((item) => item.absent).map((item) => item.id);
+}
+console.log(findAbsentId(students));
 
-function isAllAbsent() {} //boolean
+function isAllAbsent(items) {
+  return items.every((item) => item.absent);
+}
+console.log(isAllAbsent(students));
+
+const removeFalsyValues = (arrs) => {
+  return arrs.filter((arr) => arr !== 0 && arr && arr !== null && arr.length !== 0 && arr !== undefined);
+}
+
+console.log(removeFalsyValues([0, 1, false, 2, "", 3]));
+console.log(removeFalsyValues(["a", "", "b", null, "c"]));
+console.log(removeFalsyValues([null, undefined, 'A']));
