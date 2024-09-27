@@ -56,3 +56,33 @@ const removeFalsyValues = (arrs) => {
 console.log(removeFalsyValues([0, 1, false, 2, "", 3]));
 console.log(removeFalsyValues(["a", "", "b", null, "c"]));
 console.log(removeFalsyValues([null, undefined, 'A']));
+
+//G2
+const getFreqOfWords = (sentencs) => {
+  if (sentencs === null || sentencs === undefined) return undefined
+  const words = sentencs.split(' ')
+  let result = {}
+  for (let i = 0; i < words.length; i++) {
+      let word = words[i].toLowerCase()
+      if (result[word]) {
+        result[word] += 1
+      } else {
+        result[word] = 1
+      }
+  }
+  return result
+}
+
+console.log(getFreqOfWords('Today is present and present is your gift'));
+console.log(getFreqOfWords('Do you best just do it'));
+console.log(getFreqOfWords(null));
+console.log(getFreqOfWords(undefined));
+
+const addProperty = (obj, key, value) => {
+  obj[key] = value
+  return obj
+}
+
+console.log(addProperty({name:'John'}, 'age', 25));
+console.log(addProperty({}, 'city', 'New York'));
+
