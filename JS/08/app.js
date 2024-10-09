@@ -23,3 +23,19 @@ console.log(words);
 //sort
 const students = [{id:665000101, name:'Somchai'}, {id:665000131, name:'ann'}, {id:665000144, name:'Pitchit'}]
 console.log(students.sort());
+
+const studentScores = [
+    { name: 'Alice', score: 85 },
+    { name: 'Bob', score: 92 },
+    { name: 'Charlie', score: 68 },
+    { name: 'David', score: 55 },
+    { name: 'Eve', score: 78 }
+]
+
+const getPassingName = (students) => {
+    return students.filter((student) => student.score >= 70).map((student) => student.name.toUpperCase())
+}
+
+const passingName = getPassingName(studentScores)
+console.log(passingName);
+
