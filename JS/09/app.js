@@ -24,9 +24,7 @@ const todos = []
 let nextTodoId = 1
 const addTodo = (desc) => {
     if (desc === null || desc === undefined) throw new Error("Desc can't valid")
-    if (todos.some((todo) => todo.id === nextTodoId)) {
-        throw Error("ID can't unique")
-    }
+    if (todos.some((todo) => todo.id === nextTodoId)) throw Error("ID can't unique")
     const newTodo = new Todo(nextTodoId, desc)
     todos.push(newTodo)
     nextTodoId++    
@@ -54,7 +52,7 @@ removeTodo(2)
 console.log('Test Remove:', todos);
 
 const getTodos = () => {
-    return todos.forEach((todo) => console.log(`Id: ${todo.id} Description: ${todo.description}`))
+    return todos.map((todo) => `[Id:${todo.id} Description:${todo.description}] `)
 }
 console.log(addTodo("Hello Java"));
-getTodos()
+console.log(`${getTodos()}`);
