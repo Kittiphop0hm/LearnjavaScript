@@ -12,7 +12,7 @@ class CarInventory {
     }
 
     getAllCars() {
-        return this.cars.map((car) => car)
+        return this.cars
     }
 
     findCarsByColor(color) {
