@@ -8,6 +8,9 @@ function x(num) {
     return y()
 }
 
+console.log(x());
+
+
 console.log(x(5));
 
 //TodoList Practice
