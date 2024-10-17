@@ -59,21 +59,3 @@ const getTodos = () => {
 }
 console.log(addTodo("Hello Java"));
 console.log(`${getTodos()}`);
-
-const value = 10
-function x(num) {
-  const a = 1
-  //   console.log(b) //error: b is not defined
-  //x is an outer function
-  function y() {
-    const a = 'functional programming'
-    const b = 'js'
-    //y is an inner/nested function
-    return num * value + a + b
-  }
-  return y() //is not equivalent to return y
-}
-console.log(x(5)) //51
-// y() //error: y is not defined => correct way?
-
-
