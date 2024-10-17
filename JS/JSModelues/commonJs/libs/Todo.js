@@ -6,13 +6,14 @@ class Todo {
     }
 
     getTodo = () => {
-        return {id:this.id, desc:this.desc}
+        return this
     }
 
     setDescription = (desc) => {
         this.desc = desc
     }
 }
+module.exports = Todo
 
 const todo1 = new Todo("Hello Java")
 const todo2 = new Todo("Hello JS")
