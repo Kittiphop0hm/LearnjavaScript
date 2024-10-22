@@ -8,14 +8,14 @@ class BankAccount {
 
     deposit = (money) => {
         let amount = this.balance += Math.trunc(money)
-        this.transactions.push(`deposit: ${Math.trunc(amount)}`)
-        return Math.trunc(this.balance)
+        this.transactions.push(`deposit: ${amount}`)
+        return this.balance
     }
     
     withdraw = (money) => {
         let amount = this.balance -= Math.trunc(money)
-        this.transactions.push(`withdraw: ${Math.trunc(amount)}`)
-        return Math.trunc(this.balance)
+        this.transactions.push(`withdraw: ${amount}`)
+        return this.balance
     }
 
     getBalance = () => this.balance
