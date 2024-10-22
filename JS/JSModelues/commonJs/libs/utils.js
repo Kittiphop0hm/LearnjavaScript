@@ -1,14 +1,8 @@
-//destructuring import
-const {addTodo, getTodos} = require('../todoManagement')
-console.log(addTodo('Facebook'));
+const {addTodo, getTodos, findTodo, removeTodo, findIndexTodo} = require('../todoManagement')
+console.log(addTodo('University'));
 console.log(getTodos());
 
-//not use destructuring import
-const todoManagement = require('../todoManagement')
-console.log(todoManagement.addTodo('Youtube'));
-console.log(todoManagement.getTodos());
-
-const {removeTodo, findIndexTodo} = require('../todoManagement')
+console.log(findTodo(4));
+console.log(removeTodo(4));
 console.log(getTodos());
-console.log(removeTodo());
-
+console.log(findIndexTodo(3));

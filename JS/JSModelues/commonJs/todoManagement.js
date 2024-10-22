@@ -25,19 +25,8 @@ function todoManagement() {
     return {addTodo, getTodos, findTodo, removeTodo, findIndexTodo}
 }
 
-// const todoManager = todoManagement()
-// console.log(todoManager.addTodo('Eiei'));
-// console.log(todoManager.addTodo('Ai'));
-// console.log(todoManager.findTodo(3));
-// console.log(todoManager.getTodos());
-// console.log('---------------------');
-// console.log(todoManager.removeTodo(4));
-// console.log(todoManager.getTodos());
-//use destructure
-const {addTodo, getTodos, findTodo, removeTodo} = todoManagement()
-module.exports = {addTodo, getTodos}
-module.exports = {removeTodo}
-// console.log(addTodo('Helloooooooooooooo'));
-// console.log(getTodos());
-
+const {addTodo, getTodos, findTodo, removeTodo, findIndexTodo} = todoManagement()
+console.log(addTodo('Facebook'));
+console.log(getTodos());
+module.exports = {addTodo, getTodos, findTodo, removeTodo, findIndexTodo}
 
