@@ -29,4 +29,3 @@ const {addTodo, getTodos, findTodo, removeTodo, findIndexTodo} = todoManagement(
 console.log(addTodo('Facebook'));
 console.log(getTodos());
 module.exports = {addTodo, getTodos, findTodo, removeTodo, findIndexTodo}
-
