@@ -7,3 +7,8 @@ console.log(getTodos());
 const todoManagement = require('../todoManagement')
 console.log(todoManagement.addTodo('Youtube'));
 console.log(todoManagement.getTodos());
+
+const {removeTodo, findIndexTodo} = require('../todoManagement')
+console.log(getTodos());
+console.log(removeTodo());
+

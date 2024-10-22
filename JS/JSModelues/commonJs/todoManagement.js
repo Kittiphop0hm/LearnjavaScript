@@ -22,7 +22,7 @@ function todoManagement() {
         return todos
     }
 
-    return {addTodo, getTodos, findTodo, removeTodo}
+    return {addTodo, getTodos, findTodo, removeTodo, findIndexTodo}
 }
 
 // const todoManager = todoManagement()
@@ -36,6 +36,7 @@ function todoManagement() {
 //use destructure
 const {addTodo, getTodos, findTodo, removeTodo} = todoManagement()
 module.exports = {addTodo, getTodos}
+module.exports = {removeTodo}
 // console.log(addTodo('Helloooooooooooooo'));
 // console.log(getTodos());
 
