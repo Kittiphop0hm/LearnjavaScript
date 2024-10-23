@@ -125,12 +125,8 @@ const greet = (firstStr, lastStr) => {
 
 console.log(greet(undefined, 'Ohm'));
 
-const reverseString = (str) => {
-    for (let i = 0; i < str.length; i++) {
-      
-      
-    }
-}
-
-
-
+let word = 'Hello my name is Kittiphop Siranonchai'
+let capitalize = word.split(' ')
+                      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                      .join(' ');
+console.log(capitalize);
