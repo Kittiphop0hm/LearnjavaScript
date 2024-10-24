@@ -17,7 +17,12 @@ console.log(x(nums, values));
 const getId = ({id:{categoryId, productId}}) => {
     return categoryId+productId
 }
+
+const get = ({price, id:{categoryId, productId}}) => {
+  return price+categoryId+productId
+}
 console.log(getId({id: {categoryId: 'cat01', productId:1001},price:50}));
+console.log(get({id: {categoryId: 'cat01', productId:1001},price:50}));
 // console.log(getPrice({id: 1150, price: 1000000}));
 // console.log(getPrice({id: 1150, productPrice: 1000000})); //undefined
 
