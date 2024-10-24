@@ -9,14 +9,21 @@ class CourseManagement {
     }
 
     registerCourseWithOneStudent(courseId, studentId) {
-        if(!this.courses.some((course) => course.courseId === courseId)) return -1
-        //
+        const course = this.courses.find(c => c.courseId.toUpperCase() === courseId.toUpperCase());
+        if (!course) return -1;
+        if (!course.students.includes(studentId)) {
+            course.students.push(studentId);
+        }
+        return course.students.length;
     }
 
     registerCourseWithStudents(courseId, studentIds) {
-        if (!this.courses.some((course) => course.courseId === courseId)) return -1
-        CourseManagement.registeredStudents.push(...studentIds)
-        return studentIds.length
+        const course = this.courses.find((course) => course.courseId.toUpperCase() === courseId)
+        if (!course) return -1
+        if (!course.students.includes(studentIds)) {
+            course.students.push(...studentIds)
+        }
+        return course.students.length
     }
 
     findCourseIndex(courseId) {
@@ -29,9 +36,25 @@ class CourseManagement {
 
     getCourses = () => this.courses
     getCourse = (courseId) => this.courses.find((course) => course.courseId === courseId)
-    // getRegisteredStudent(courseId) {
-        
-    // }
+    
+    getRegisteredStudent(courseId) {
+        for (let i = 0; i < this.courses.length; i++) {
+            if (this.courses[i].courseId.toUpperCase().includes(courseId.toUpperCase())) {
+                return this.courses[i].students
+            }
+        } 
+        return []
+    }
+
+    removeStudentInCourse(courseId, studentId) {
+        for (let i = 0; i < this.courses.length; i++) {
+            if (this.courses[i].courseId.toUpperCase().includes(courseId.toUpperCase())) {
+                const findIndexStudent = this.courses.students.findIndex((student) => student === studentId)
+                return this.courses[i].students.splice(findIndexStudent, 1, studentId)
+            }
+        }
+        return -1
+    }
 }
 
 
@@ -76,3 +99,15 @@ class CourseManagement {
     // Test Case 7: Get a specific course
     console.log(cm.getCourse('INT201')) // Expected: course object for 'INT201'
     console.log('-----------------------------------------------------')
+
+    // Test Case 8: Get registered students for a course
+    console.log(cm.getRegisteredStudent('INT201')) // Expected: array of registered students
+    console.log('-----------------------------------------------------')
+
+    // Test Case 9: Remove a student from a course
+    console.log(cm.removeStudentInCourse('INT201', 1003)) // Expected: updated course object
+    console.log(cm.removeStudentInCourse('INT205', 1003)) // Expected: -1 (invalid course)
+    console.log('-----------------------------------------------------')
+
+    // Test Case 10: Get updated course information
+    console.log(cm.getCourse('INT201')) // Expected: updated course object for 'INT201'
