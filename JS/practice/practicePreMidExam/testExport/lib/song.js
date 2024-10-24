@@ -4,7 +4,7 @@ class Song {
     static id = 1
 
     constructor(name, author) {
-        this.id = Song.id
+        this.id = Song.id++
         this.name = name
         this.author = author 
     }
@@ -15,4 +15,4 @@ class Song {
     }
 }
 
-module.exports = Song
+module.exports = {Song, Spotify}
