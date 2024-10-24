@@ -10,7 +10,7 @@ class CourseManagement {
 
     registerCourseWithOneStudent(courseId, studentId) {
         if(!this.courses.some((course) => course.courseId === courseId)) return -1
-        
+        //
     }
 
     registerCourseWithStudents(courseId, studentIds) {
