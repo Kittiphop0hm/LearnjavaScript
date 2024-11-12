@@ -28,3 +28,27 @@ const displayText = () => {
 
     e.setAttribute('class', 'jsBasic')
 }
+// Add ------------------------------------
+const menu = document.getElementById("menu")
+let count = 1;
+const addItem = () => {
+    const list = document.createElement("li");
+    list.innerText = `item ${count++}`;
+    menu.appendChild(list)
+}
+
+// Delete ----------------------------------
+const deleteItem = () => {
+    const list = document.querySelector("li")
+    menu.removeChild(list)
+}
+
+// Replace ----------------------------------
+const choice = document.querySelector(".choice")
+const replaceItem = () => {
+     const list = document.querySelector('.item-1')
+     const newList = document.createElement('li')
+     newList.innerText = 'A is not correct choice'
+     choice.replaceChild(newList, list)
+}
+
