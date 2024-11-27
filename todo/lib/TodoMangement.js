@@ -49,6 +49,10 @@ const TodoListManagement = () => {
     return todos;
   }
 
+  function loadTodos(userTodos) {
+    return userTodos
+  }
+
   return {
     addTodo,
     findTodo,
@@ -58,6 +62,7 @@ const TodoListManagement = () => {
     getNumberOfDone,
     getNumberOfNotDone,
     clearTodo,
+    loadTodos,
   };
 };
 const {
@@ -69,6 +74,7 @@ const {
   getNumberOfDone,
   getNumberOfNotDone,
   clearTodo,
+  loadTodos
 } = TodoListManagement();
 
 export {
@@ -80,4 +86,5 @@ export {
   getNumberOfDone,
   getNumberOfNotDone,
   clearTodo,
+  loadTodos,
 };
