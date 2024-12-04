@@ -45,6 +45,11 @@ function TodoManagement() {
     function clearTodo() {
         todos.length = 0
     }
+
+    function setItemToDone(doneId) {
+        const todo = findTodo(doneId)
+        todo.setDone(true)
+    }
  
     return { addTodo, findTodo, findIndexTodo, removeTodo,getNumberOfDone,getNumberOfNotDone,clearTodo }
 }
