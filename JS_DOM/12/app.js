@@ -31,6 +31,3 @@ console.log(allDiv);
 
 
 
-
-
-
