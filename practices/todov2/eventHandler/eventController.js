@@ -8,26 +8,20 @@ const addTodoHandler = () => {
     if (valueInput !== null || valueInput !== undefined || valueInput.length !== 0) {
         const todoId = addTodo(valueInput)
         showTodoItem(todoId, valueInput)
+        input.value = ''
     }
-    notDoneButtonHandler()
-    removeButtonHandler()
     showNumberOfDone(getNumberOfDone())
     showNumberOfNotDone(getNumberOfNotDone())
 }
 
-const notDoneButtonHandler = () => {
-    const number = 0
-    const notDoneBtn = document.querySelector('.todoItem')
-    notDoneBtn.addEventListener("click", (e) => {
-        const notBtn = document.querySelector('.todoItem').childNodes[1]
-        notBtn.textContent = 'Done'
-        notBtn.style.color = 'white'
-        notBtn.style.border = '1px solid black'
-        notBtn.style.backgroundColor = 'green'
-        setItemToDone(e.target.id)
-        showNumberOfDone(getNumberOfDone())
-        showNumberOfNotDone(getNumberOfNotDone())
-    })
+const notDoneButtonHandler = (event) => {
+    const donebtn = event.target
+    const id = donebtn.parentElement.getAttribute('id')
+    donebtn.style.color = 'white'
+    donebtn.style.backgroundColor = 'green'
+    setItemToDone(id)
+    showNumberOfDone(getNumberOfDone())
+    showNumberOfNotDone(getNumberOfNotDone())
 }
 
 const removeButtonHandler = () => {
