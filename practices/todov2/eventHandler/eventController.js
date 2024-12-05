@@ -18,40 +18,48 @@ import {
 const addTodoHandler = () => {
   const addBtn = document.getElementById("addBtn");
   const input = document.querySelector("input");
-  const valueInput = input.value.trim();
-  if (
-    valueInput !== null ||
-    valueInput !== undefined ||
-    valueInput.length !== 0
-  ) {
-    const todoId = addTodo(valueInput);
-    showTodoItem(todoId, valueInput);
-    input.value = "";
-  }
-  showNumberOfDone(getNumberOfDone());
-  showNumberOfNotDone(getNumberOfNotDone());
+  addBtn.addEventListener(("click"),() => {
+      const valueInput = input.value.trim();
+      if (!valueInput) return;
+      const todoId = addTodo(valueInput);
+      showTodoItem(todoId, valueInput);
+      input.value = "";
+      registerButtonEventHandler(todoId);
+      showNumberOfDone(getNumberOfDone());
+      showNumberOfNotDone(getNumberOfNotDone());
+    })
 };
 
-function notDoneButtonHandler(doneId) {
-  const doneBtn = document.getElementById(doneId).querySelector(".notDone");
-  const todo = findTodo(doneId)
+function registerButtonEventHandler(id) {
+  const buttons = document.getElementById(id).getElementsByTagName('button')
+
+  buttons[0].addEventListener(
+    ("click"), (event) => notDoneButtonHandler(event, id))
+  buttons[1].addEventListener(
+    ("click"), (event) => removeButtonHandler(event, id))
+}
+
+function notDoneButtonHandler(event, id) {
+  const doneBtn = event.target;
+
   doneBtn.textContent = "Done";
   doneBtn.style.color = "white";
   doneBtn.style.backgroundColor = "green";
-  todo.setItemToDone(doneId)
+  setItemToDone(id);
   showNumberOfDone(getNumberOfDone());
   showNumberOfNotDone(getNumberOfNotDone());
 }
 
-const removeButtonHandler = () => {
-  const removeBtn = document.querySelector(".todoItem").lastChild;
-  removeBtn.addEventListener("click", (e) => {
-    const numberId = e.target.id;
-    removeTodoItem(numberId);
-    removeTodo(numberId);
-    showNumberOfDone(getNumberOfDone());
-    showNumberOfNotDone(getNumberOfNotDone());
-  });
+const removeButtonHandler = (event, id) => {
+  removeTodoItem(id)
+  removeTodo(id)
+  showNumberOfDone(getNumberOfDone());
+  showNumberOfNotDone(getNumberOfNotDone());
 };
 
-export { addTodoHandler, notDoneButtonHandler, removeButtonHandler };
+export {
+  addTodoHandler,
+  notDoneButtonHandler,
+  removeButtonHandler,
+  registerButtonEventHandler,
+};

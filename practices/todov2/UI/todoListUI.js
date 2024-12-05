@@ -26,8 +26,8 @@ const showNumberOfNotDone = (numberOfNotDone) => {
 } 
 
 const removeTodoItem = (removeId) => {
-    const todo = document.getElementById(removeId)
-    listItem.removeChild(todo)
+    const todoElement = document.getElementById(removeId)
+    todoElement.remove()
 }
 
 export { showTodoItem, showNumberOfDone, showNumberOfNotDone,removeTodoItem }
