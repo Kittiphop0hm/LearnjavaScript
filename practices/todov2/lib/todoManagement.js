@@ -48,7 +48,7 @@ function TodoManagement() {
 
     function setItemToDone(doneId) {
         const todo = findTodo(doneId)
-        todo.setDone(true)
+        if(!todo.done) todo.setDone()
     }
  
     return { addTodo, findTodo, findIndexTodo, removeTodo,getNumberOfDone,getNumberOfNotDone,clearTodo,setItemToDone }

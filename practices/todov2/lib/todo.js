@@ -9,7 +9,7 @@ class Todo {
 
     getTodo = () => this
     setDescription = (newDesc) => this.desc = newDesc
-    setDone = (boolean) => this.done = boolean
+    setDone = () => this.done = true
 }
 
 export { Todo }
