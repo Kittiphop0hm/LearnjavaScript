@@ -1,12 +1,12 @@
-const listTodo = document.getElementById('listTodo')
 const showTodoItem = (newId, newDescription) => {
+    const listTodo = document.getElementById('listTodo')
     const todoItem = document.createElement('div')
     const desc = document.createElement('p')
     const btnNotDone = document.createElement('button')
     const btnRemove = document.createElement('button')
 
     todoItem.setAttribute('class', 'todoItem')
-    todoItem.setAttribute('id', `${newId}`)
+    todoItem.id = newId
     desc.textContent = `${newDescription}`
     btnNotDone.textContent = 'Not Done'
     btnRemove.textContent = 'Remove'
@@ -26,7 +26,8 @@ const showNumberOfNotDone = (numberOfNotDone) => {
 } 
 
 const removeTodoItem = (removeId) => {
-    
+    const todo = document.getElementById(removeId)
+    listItem.removeChild(todo)
 }
 
-export { showTodoItem, showNumberOfDone, showNumberOfNotDone }
+export { showTodoItem, showNumberOfDone, showNumberOfNotDone,removeTodoItem }

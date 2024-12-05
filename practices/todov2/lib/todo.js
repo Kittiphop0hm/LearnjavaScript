@@ -1,10 +1,10 @@
 class Todo {
      static runningId = 1 
 
-    constructor(id = Todo.runningId++, desc, done = false) {
-        this.id = id
+    constructor(desc) {
+        this.id = Todo.runningId++
         this.desc = desc
-        this.done = done
+        this.done = false
     }
 
     getTodo = () => this

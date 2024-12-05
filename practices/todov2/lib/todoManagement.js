@@ -6,7 +6,7 @@ function TodoManagement() {
     function addTodo(desc) {
         const todo = new Todo(desc)
         todos.push(todo)
-        return todo.id    
+        return todo.id  
     }    
 
     function findTodo(searchId) {
@@ -51,8 +51,8 @@ function TodoManagement() {
         todo.setDone(true)
     }
  
-    return { addTodo, findTodo, findIndexTodo, removeTodo,getNumberOfDone,getNumberOfNotDone,clearTodo }
+    return { addTodo, findTodo, findIndexTodo, removeTodo,getNumberOfDone,getNumberOfNotDone,clearTodo,setItemToDone }
 }
 
-const { addTodo, findTodo, findIndexTodo, removeTodo,getNumberOfDone,getNumberOfNotDone,clearTodo } = TodoManagement()
-export { addTodo, findTodo, findIndexTodo, removeTodo,getNumberOfDone,getNumberOfNotDone,clearTodo }
+const { addTodo, findTodo, findIndexTodo, removeTodo,getNumberOfDone,getNumberOfNotDone,clearTodo,setItemToDone } = TodoManagement()
+export { addTodo, findTodo, findIndexTodo, removeTodo,getNumberOfDone,getNumberOfNotDone,clearTodo,setItemToDone }
